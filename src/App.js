@@ -44,7 +44,7 @@ function App() {
         {searchResults.map((city) => <div
           key={`${city.lat}-${city.lon}`}
           onClick={() => selectedCity(city)}>
-          {city.name}
+          {city.name}, {city.lat}, {city.lon}
         </div>)}
       </div>
 
