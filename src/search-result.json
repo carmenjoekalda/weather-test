@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Melbourne",
+        "local_names": {
+            "es": "Melbourne",
+            "pl": "Melbourne",
+            "lt": "Melburnas",
+            "oc": "Melbourne",
+            "mk": "Мелбурн",
+            "eo": "Melburno",
+            "ru": "Мельбурн",
+            "it": "Melbourne",
+            "el": "Μελβούρνη",
+            "uk": "Мельбурн",
+            "kn": "ಮೆಲ್ಬೋರ್ನ್",
+            "pt": "Melbourne",
+            "de": "Melbourne",
+            "fr": "Melbourne",
+            "sr": "Мелбурн",
+            "fi": "Melbourne",
+            "is": "Melbourne",
+            "mr": "मेलबर्न",
+            "s sv": "Melbourne",
+            "ar": "ملبورن",
+            "mi": "Poipiripi",
+            "en": "Melbourne",
+            "ja": "メルボルン",
+            "hi": "मेलबॉर्न",
+            "bn": "মেলবোর্ন",
+            "zh": "墨爾本",
+            "bg": "Мелбърн",
+            "he": "מלבורן",
+            "ko": "멜버른"
+        },
+        "lat": -37.8142454,
+        "lon": 144.9631732,
+        "country": "AU",
+        "state": "Victoria"
+    },
+    {
+        "name": "Melbourne",
+        "local_names": {
+            "ru": "Мельбурн",
+            "sr": "Мелбурн",
+            "uk": "Мелборн",
+            "en": "Melbourne",
+            "bn": "মেলবোর্ন",
+            "ja": "メルボーン"
+        },
+        "lat": 28.0785034,
+        "lon": -80.6077908,
+        "country": "US",
+        "state": "Florida"
+    },
+    {
+        "name": "Melbourne",
+        "lat": 41.9430186,
+        "lon": -93.1030319,
+        "country": "US",
+        "state": "Iowa"
+    },
+    {
+        "name": "Melbourne",
+        "local_names": {
+            "en": "Melbourne"
+        },
+        "lat": -37.8141705,
+        "lon": 144.9655616,
+        "country": "AU",
+        "state": "Victoria"
+    },
+    {
+        "name": "Melbourne CP",
+        "local_names": {
+            "en": "Melbourne CP"
+        },
+        "lat": 52.8228134,
+        "lon": -1.4283564,
+        "country": "GB",
+        "state": "England"
+    }
+]
