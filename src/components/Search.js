@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-function Search({ onSearchResults }) {
+const Search = ({ onSelectItem }) => {
   const [query, setQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   const inputChangeHandler = (event) => {
     setQuery(event.target.value);
@@ -11,7 +12,7 @@ function Search({ onSearchResults }) {
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`)
       .then((result) => result.json())
       .then((cities) => {
-        onSearchResults(
+        setSearchResults(
           cities.map((city) => ({
             name: city.name,
             country: city.country,
@@ -24,10 +25,28 @@ function Search({ onSearchResults }) {
 
   return (
     <div>
-      <input type="text" data-testid="search-input" onChange={inputChangeHandler} />
-      <button data-testid="search-button" onClick={buttonClickHandler}>Search</button>
+      <input
+        type="text"
+        data-testid="search-input"
+        value={query}
+        onChange={inputChangeHandler}
+      />
+      <button data-testid="search-button" onClick={buttonClickHandler}>
+        Search
+      </button>
+
+      <div data-testid="search-results">
+        {searchResults.map((city) => (
+          <div
+            key={`${city.lat}-${city.lon}`}
+            onClick={() => onSelectItem(city)}
+          >
+            {city.name}, {city.lat}, {city.lon}
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default Search;
