@@ -3,7 +3,7 @@ import './App.css'
 
 import Search from './components/Search';
 import WeatherCard from './components/WeatherCard'
-import { createMockServer } from './createMockServer';
+import { createMockServer } from './mock/createMockServer';
 
 if (process.env.NODE_ENV === "development") {
   createMockServer()
