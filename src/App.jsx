@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { createMockServer } from './createMockServer';
 
-if(process.env.NODE_ENV === "Development") {
+if(process.env.NODE_ENV === "development") {
   createMockServer()
 }
 
