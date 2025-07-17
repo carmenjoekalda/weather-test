@@ -24,6 +24,11 @@ function Search({ onSelectCity }) {
             })
     }
 
+    const onSelect = (city) => {
+        onSelectCity(city)
+        setSearchResults([])
+    }
+
     return (
         <div className="search-container">
             <div className="input-container">
@@ -37,7 +42,7 @@ function Search({ onSelectCity }) {
                         <div
                             className="search-result"
                             key={`${city.lat}-${city.lon}`}
-                            onClick={() => onSelectCity(city)}>
+                            onClick={() => onSelect(city)}>
                             <span className="city-name">{city.name}</span>
                             <span className="city-location">{city.lat}, {city.lon}</span>
                         </div>

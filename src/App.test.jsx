@@ -63,6 +63,8 @@ describe("Weather Application tests", () => {
         await userEvent.click(selected);
 
         expect(within(screen.getByTestId("my-weather-list")).getByText(/Melbourne/i)).toBeInTheDocument()
+
+        expect(screen.queryByTestId("search-results")).not.toBeInTheDocument()
     });
 })
 
