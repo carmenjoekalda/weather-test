@@ -1,0 +1,45 @@
+{
+  "coord": {
+    "lon": -80.6081,
+    "lat": 28.0836
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 30.48,
+    "feels_like": 37.48,
+    "temp_min": 29.42,
+    "temp_max": 31.69,
+    "pressure": 1019,
+    "humidity": 78,
+    "sea_level": 1019,
+    "grnd_level": 1019
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 6.69,
+    "deg": 130
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1752764703,
+  "sys": {
+    "type": 1,
+    "id": 4922,
+    "country": "US",
+    "sunrise": 1752748600,
+    "sunset": 1752798008
+  },
+  "timezone": -14400,
+  "id": 4163971,
+  "name": "Melbourne",
+  "cod": 200
+}

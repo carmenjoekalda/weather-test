@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+
 import Search from './components/Search';
+import WeatherCard from './components/WeatherCard'
 import { createMockServer } from './createMockServer';
 
 if (process.env.NODE_ENV === "development") {
@@ -17,14 +19,11 @@ function App() {
   return (
     <div className="App">
       <h1>Weather Application</h1>
-
       <Search onSelectCity={selectCity} />
 
       <div data-testid="my-weather-list">
-        {selected && selected.map((city) => <div
-          key={`${city.lat}-${city.lon}`}>
-          {city.name}
-        </div>
+        {selected && selected.map((city) =>
+          <WeatherCard key={`${city.lat}-${city.lon}`} city={city} />
         )}
       </div>
     </div>
@@ -32,4 +31,3 @@ function App() {
 }
 
 export default App
-
