@@ -12,4 +12,4 @@ const createMockServer = () => {
     })
 }
 
-export {createMockServer}
+export { createMockServer }

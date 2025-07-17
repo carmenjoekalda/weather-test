@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>Weather Application</h1>
-      
+
       <Search onSelectCity={selectCity} />
 
       <div data-testid="my-weather-list">

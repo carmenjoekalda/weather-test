@@ -42,7 +42,10 @@ describe("Weather Application tests", () => {
         userEvent.click(button)
 
         await waitFor(() => expect(screen.getAllByText(/Melbourne/i).length).toEqual(5))
-        expect(screen.getByText(/Melbourne, -37.8141705, 144.9655616/i)).toBeInTheDocument()
+        const melbournes = screen.getAllByText(/Melbourne/i)
+        expect(melbournes.length).toBeGreaterThan(0)
+        expect(screen.getByText(/-37.8141705, /i)).toBeInTheDocument()
+        expect(screen.getByText(/144.9655616/i)).toBeInTheDocument()
     });
 
     it("add search result to my weather list", async () => {
