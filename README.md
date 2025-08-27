@@ -13,7 +13,7 @@ A responsive weather web application which allows users to search for and monito
  
 # 🛠️Tech Stack
 - React + Vite
-- Testing: Vitest + Testing Library
+- Testing: Vitest + Testing Library, Cypress, Selenium
 - Mocking: MirageJS
 - API: OpenWeatherMap
 
@@ -24,10 +24,12 @@ Weather-test/
 │   ├── assets/            # Background images for the weather cards
 │   ├── components/        # Reusable components
 │   ├── mock/              # Mock weather data
-│   ├── tests/             # Tests
+│   ├── tests/             # Vitest + Testing Library integration tests (on all branches)
 │   ├── App.css            # Global styles
 │   ├── App.jsx            # Central component, renders functionality from components
 │   ├── main.jsx           # JavaScript entry point
+│── cypress/               # Cypress UI and E2E tests (only on "cypress" branch)
+│── selenium/              # Selenium UI tests (only on "selenium" branch)
 │── # Other essential files at the root (e.g., index.html, package.json, .gitignore) which are required to run and configure the project but typically don’t need editing
 
 ```
@@ -46,8 +48,33 @@ Weather-test/
    ```
    npm run dev
    ```
-4. Start the tests
+4. Run Vitest + Testing Library tests (available on all branches)
    ```
    npm run test
    ```
 5. Feel free to change files in the `src` folder
+
+# 🌿Branch Workflow for Testing
+The project uses three separate branches for different testing setups:
+1. Main branch
+- Contains the base application and Vitest + Testing Library integration tests
+- Tests are located in `/src/tests/`
+- run tests with:
+  ```
+   npm run test
+  ```
+2. Cypress branch
+- Adds Cypress end-to-end and UI tests, alongside Vitest
+- Tests are located in `cypress`
+- Run Cypress tests with:
+  ```
+  npx cypress open --component
+  npx cypress open --e2e
+  ```
+3. Selenium branch
+- Adds Selenium WebDriver tests, alongside Vitest
+- Tests are located in the `selenium/`
+- Run Selenium tests with:
+  ```
+   node selenium/weather.js
+  ```
